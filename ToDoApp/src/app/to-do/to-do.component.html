@@ -1,0 +1,22 @@
+<h1> ToDo App </h1>
+<hr>
+
+<h3> The Animal Input is: {{ animal_input }} </h3>
+
+<div class="form-group" style="padding: 0px; margin: 0px;">
+  <label><h3> Enter an Animal </h3></label> <br>
+  <input [(ngModel)]="animal_input" type="text" #animalHtml class="form-control" style="width: 40%; display: inline;"/> 
+  <button (click)="addAnimal(animalHtml)" class="btn btn-primary btn-md mb-1"> Add an Animal </button>
+</div>
+<br>
+
+
+<ul>
+  <div class="list-group">
+    <li *ngFor="let animal of animals;let i=index" class="list-group-item" style="width: 40%;"> 
+      <input [(ngModel)]="animals[i]" class="form-control"/> 
+      <button (click)="removeAnimal(animal)" class="btn btn-danger btn-md" style="position: absolute; right: 0; top: 0; bottom: 0;"> X </button>
+    </li>
+  </div>
+</ul>
+

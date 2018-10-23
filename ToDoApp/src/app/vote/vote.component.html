@@ -1,0 +1,10 @@
+
+ <div style="margin-right: 10%; float: left;">
+    <img class="card-img-top" src="../../assets//images/avatar.png" alt="Card image cap" style="width: 18rem;">
+    <div class="card-body">
+        {{ name }}
+        <button (click)="vote(true)"  [disabled]="didVote"  class="btn-success">Agree</button>
+        <button (click)="vote(false)"  [disabled]="didVote" class="btn-danger">Disagree</button>
+    </div>
+</div>
+
