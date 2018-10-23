@@ -1,0 +1,16 @@
+<div class="text-center">
+  <b>Add Movie</b><input #movieHTML type="text" class="form-control form-control-lg" style="display: inline; width: 70%;" />
+  <button (click)="addMovie(movieHTML)" class="btn-primary btn-lg">Add Movie</button>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-3"></div>
+  <ul class="list-group col-6">
+    <li *ngFor="let movie of movies; let i = index" class="list-group-item">
+      <input type="text" [(ngModel)]="movies[i]" class="form-control"  style="display: inline; width: 90%;">
+      <button (click)="removeMovie(movie)" class="btn-danger" style="float: right; cursor: pointer;"> X </button>
+    </li>
+  </ul>
+</div>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './Student.component'
 import { ToDoComponent } from './to-do/to-do.component';
 import { VoteComponent } from './vote/vote.component';
+import { SimpleMoviesComponent } from './simple-movies/simple-movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
     ToDoComponent,
-    VoteComponent
+    VoteComponent,
+    SimpleMoviesComponent
   ],
   imports: [
     BrowserModule,
